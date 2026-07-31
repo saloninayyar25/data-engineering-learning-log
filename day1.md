@@ -1,4 +1,4 @@
-## Day 1 — July 31, 2026: From planning to a working multi-city pipeline
+## Day 1 - From planning to a working multi-city pipeline
 
 Converted a personal Power BI Airbnb dashboard (originally built on a static 
 Kaggle/Maven dataset) into the start of a production-style, automated data pipeline.
