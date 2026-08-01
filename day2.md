@@ -2,6 +2,7 @@
 
 Made the pipeline run on its own, without my laptop, on a schedule.
 
+
 **What I built today:**
 - Set up `.gitignore` to keep credentials out of version control
 - Refactored credential handling to work both locally (file) and in CI (secret)
