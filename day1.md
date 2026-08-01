@@ -3,6 +3,8 @@
 Converted a personal Power BI Airbnb dashboard (originally built on a static 
 Kaggle/Maven dataset) into the start of a production-style, automated data pipeline.
 
+
+
 **What I built today:**
 - Planned the shift from a one-time static file to a live, refreshable data source
 - Set up a GCP project + BigQuery dataset (`airbnb_raw`), with a scoped service 
