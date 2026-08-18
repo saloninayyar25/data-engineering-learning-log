@@ -4,17 +4,17 @@ A systematic record of everything built so far: **what** was done, **how**, and 
 
 ---
 
-## Step 1 — Planning the production upgrade
+## Step 1 - Planning the production upgrade
 
 **What:** Defined the overall plan to turn a static Power BI dashboard into a production system: automated data pipeline → cloud warehouse → transformation layer → refreshed dashboard, tied to a real business problem.
 
-**How:** Mapped out the phases — fix the data layer first, then automation, then transformation, then reconnect Power BI.
+**How:** Mapped out the phases - fix the data layer first, then automation, then transformation, then reconnect Power BI.
 
 **Why:** A dashboard built on a manually-imported file can never be automated or trusted to stay current. Production systems need a live, repeatable pipeline behind them, not a one-time import.
 
 ---
 
-## Step 2 — Choosing the data source
+## Step 2 - Choosing the data source
 
 **What:** Selected **Inside Airbnb** (insideairbnb.com) as the live data source, using the same 10 cities as the original dashboard: Bangkok, Cape Town, Hong Kong, Istanbul, Mexico City, New York, Paris, Rio de Janeiro, Rome, Sydney.
 
@@ -28,7 +28,7 @@ Collected `listings.csv.gz`, `calendar.csv.gz`, `reviews.csv.gz` URLs for all 10
 
 ---
 
-## Step 3 — Setting up Google BigQuery (the cloud warehouse)
+## Step 3 - Setting up Google BigQuery (the cloud warehouse)
 
 **What:** Created a GCP project (`airbnb-dashboard-prod`), a BigQuery dataset (`airbnb_raw`), a service account (`airbnb-pipeline-bot`) with scoped IAM roles, and downloaded its JSON key.
 
@@ -41,7 +41,7 @@ Collected `listings.csv.gz`, `calendar.csv.gz`, `reviews.csv.gz` URLs for all 10
 
 ---
 
-## Step 4 — Setting up the Python environment
+## Step 4 - Setting up the Python environment
 
 **What:** Created a local project folder (`airbnb-pipeline`), a Python virtual environment, and installed required libraries.
 
@@ -57,7 +57,7 @@ Stored `gcp-key.json` locally and referenced it via a `.env` file.
 
 ---
 
-## Step 5 — Building the ingestion pipeline (`ingest.py`)
+## Step 5 - Building the ingestion pipeline (`ingest.py`)
 
 ### 5a. Download raw files
 **What:** Script downloads `listings.csv.gz` and `reviews.csv.gz` for each city (calendar deliberately excluded — see below).
@@ -92,7 +92,7 @@ Stored `gcp-key.json` locally and referenced it via a `.env` file.
 
 ---
 
-## Step 6 — Automating with GitHub Actions
+## Step 6 - Automating with GitHub Actions
 
 **What:** Made `ingest.py` run automatically on a schedule, on GitHub's servers, without the local machine needing to be on.
 
@@ -115,7 +115,7 @@ Stored `gcp-key.json` locally and referenced it via a `.env` file.
 
 ---
 
-## Step 7 — Transformation layer with dbt (in progress)
+## Step 7 - Transformation layer with dbt (in progress)
 
 **What:** Introducing a modeling layer between raw BigQuery tables and the eventual Power BI report, so Power BI connects to clean, purpose-built tables instead of raw data.
 
@@ -141,7 +141,7 @@ Stored `gcp-key.json` locally and referenced it via a `.env` file.
 
 ---
 
-## Current state — what's real and working right now
+## Current state - what's real and working right now
 
 ✅ Live data source (Inside Airbnb, 10 cities)
 ✅ Cloud data warehouse (BigQuery, `airbnb_raw` dataset)
