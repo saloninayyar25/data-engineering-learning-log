@@ -1,4 +1,4 @@
-# Airbnb Production Pipeline — Project Recap
+# Airbnb Production Pipeline: Project Recap
 
 A systematic record of everything built so far: **what** was done, **how**, and **why**.
 
