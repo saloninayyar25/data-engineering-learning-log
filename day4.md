@@ -1,5 +1,3 @@
----
-
 ## Day 4 — Resume overhaul + starting Power BI reconnection
 
 Used the finished pipeline work to properly update my resume, then began 
